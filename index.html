@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/      semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Self App</title>
+  <style>
+    body {
+      margin: 20px 20px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      font-size: 16px;
+      width: 80%;
+    }
+    .usage {
+      display: flex;
+      flex-direction: row;
+    }
+    .activity {
+      width: 95%;
+      text-align: left;
+    }
+    .statistic {
+      text-align: left;
+    }
+    .label {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .cpu, .ram {
+      width: 100px;
+      display: inline-block;
+    }
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #000;
+      color: white;
+      text-align: center;
+    }
+
+    /* Tab */
+    .ui.tabular.menu {
+      margin-top: 0;
+    }
+    .ui.tabular.menu .item {
+      /* padding: 0; */
+      padding: 5px 5px;
+      font-size: 12px;
+    }
+    /* Tab */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class ="usage">
+      <div class="statistic">
+        <div class="value">
+          <i class="server icon"></i> <span class="cpu">0%</span>
+        </div>
+        <div class="label">
+          CPU
+        </div>
+      </div>
+      <div class="statistic">
+        <div class="value">
+          <i class="microchip icon"></i> <span class="ram">0%</span>
+        </div>
+        <div class="label">
+          RAM
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="activity">
+      <hr/>
+      <b>Activity</b>
+      <div class="ui top attached tabular menu">
+        <div class="active item">Claim</div>
+        <a class="item active" data-tab="tab1">Claim</a>
+        <a class="item" data-tab="tab2">Second</a>
+        <a class="item" data-tab="tab3"><i class="plus square outline icon"></i></a>
+      </div>
+      <div class="ui bottom attached loading tab segment">
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="footer">
+    Node.js <span id="node-version"></span>,
+    Chromium <span id="chrome-version"></span>,
+    and Electron <span id="electron-version"></span>.
+  </div>
+  
+
+  <!-- You can also require other files to run in this process -->
+  <script src="./renderer.js"></script>
+</body>
+
+</html>
