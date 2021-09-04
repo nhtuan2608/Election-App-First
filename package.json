@@ -1,18 +1,18 @@
 {
-  "name": "Electron-App",
-  "productName": "Electron-App",
+  "name": "breezy-problem-prepare-mipey",
+  "productName": "breezy-problem-prepare-mipey",
   "description": "My Electron application description",
   "keywords": [],
   "main": "./main.js",
   "version": "1.0.0",
-  "author": "tt",
+  "author": "PC",
   "scripts": {
     "start": "electron ."
   },
   "dependencies": {
-    "jquery": "^3.6.0"
+    "axios": "*"
   },
   "devDependencies": {
-    "electron": "13.1.5"
+    "electron": "13.1.7"
   }
 }
